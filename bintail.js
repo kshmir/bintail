@@ -33,8 +33,6 @@ Bintail.prototype._transform = function _transform(input, encoding, done) {
 };
 
 Bintail.prototype._schedulePoll = function _schedulePoll() {
-  this._delay = Math.min(1000, this._delay * 2);
-
   setTimeout(this._poll.bind(this), this._delay);
 };
 
